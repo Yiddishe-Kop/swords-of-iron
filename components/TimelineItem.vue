@@ -11,8 +11,8 @@
     <div class="absolute top-0 right-0 flex left-0 p-3">
       <i class="flex-1"></i>
       <nav class="flex space-x-2 items-center">
-        <AppButton icon="download" color="secondary" @click="download" />
-        <AppButton icon="share" color="secondary" @click="share" />
+        <AppButton icon="download" @click="download" />
+        <AppButton icon="share" @click="share" />
       </nav>
     </div>
   </li>
