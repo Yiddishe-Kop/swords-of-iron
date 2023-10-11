@@ -4,5 +4,6 @@
   </Head>
 
   <Hero />
+  <LanguagePicker />
   <Timeline />
 </template>

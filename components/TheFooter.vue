@@ -7,7 +7,12 @@
             <Logo class="h-28" theme="dark" full />
           </nuxt-link>
           <div class="ms-8">
-            <p class="">Take part in the <strong>war of awareness</strong></p>
+            <p class="font-bold max-w-sm mx-auto">
+              Share the truth <span class="font-thin">&</span> show the world!
+            </p>
+            <p class="text-brand-900">
+              Take part in the <strong>war of awareness</strong>
+            </p>
             <p class="mt-2 text-sm text-brand max-w-sm mx-auto">
               Join the fight against Hamas's lies! Share the truth about
               terrorism on social media and show the world what Hamas is really

@@ -159,7 +159,7 @@ export default {
     colorClasses() {
       return {
         brand:
-          "bg-brand-500 border-transparent text-white hover:bg-brand-900 focus:bg-brand-900 focus:ring-brand-400",
+          "bg-brand border-transparent text-white hover:bg-brand-600 focus:bg-brand-900 focus:ring-brand-400",
         gradient:
           "bg-brand-gradient border-0 text-white focus:bg-brand-900 focus:ring-brand-400",
         secondary:

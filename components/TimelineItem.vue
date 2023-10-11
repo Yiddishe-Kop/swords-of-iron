@@ -1,5 +1,5 @@
 <template>
-  <li class="relative rounded-3xl overflow-hidden">
+  <li class="relative rounded-xl overflow-hidden">
     <Plyr
       v-if="file.mimeType.startsWith('video')"
       :src="file.webContentLink"
@@ -69,11 +69,10 @@ const share = async () => {
     // files: filesArray,
   };
 
-  if (navigator.canShare(shareData)) {
+  if (navigator.canShare?.(shareData)) {
     navigator.share(shareData);
   } else {
-    console.log({ shareData });
-    alert("Your browser does not support sharing files.");
+    navigator.clipboard.writeText(shareData.url);
   }
 };
 </script>
