@@ -10,5 +10,5 @@
 <script setup>
 const lang = useRoute().params.lang || "english";
 
-const { data } = await useFetch("/api/files");
+const { data } = await useFetch(`/api/files/${lang}`);
 </script>

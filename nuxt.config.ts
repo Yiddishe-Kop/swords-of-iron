@@ -20,4 +20,9 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
+  runtimeConfig: {
+    apiKey: "", // can be overridden by NUXT_API_KEY environment variable
+    mainFolderId: "", // can be overridden by NUXT_MAIN_FOLDER_ID environment variable
+  },
 });
