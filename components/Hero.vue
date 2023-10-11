@@ -4,12 +4,13 @@
       <h2 class="text-brand text-xl">Israel Explains</h2>
       <h1 class="font-black text-brand-950 text-3xl">SWORDS OF IRON</h1>
       <p>Take part in the <strong>war of awareness</strong></p>
-      <p class="mt-6 text-sm text-brand max-w-sm mx-auto">
-        Join the fight against Hamas's lies! Share the truth about terrorism on
-        social media and show the world what Hamas is really all about.
-        #SUPPORTISRAEL
+      <p class="mt-6 text-brand-900 font-bold max-w-sm mx-auto">
+        Share the truth <span class="font-thin">&</span> show the world!
       </p>
-      <LanguagePicker class="mt-12" />
+      <p class="mt-6 text-slate-800 uppercase text-sm max-w-sm mx-auto">
+        Choose a language to show content:
+      </p>
+      <LanguagePicker class="mt-2" />
     </Container>
   </section>
 </template>

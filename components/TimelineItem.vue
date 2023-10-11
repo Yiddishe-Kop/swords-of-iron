@@ -1,14 +1,14 @@
 <template>
   <li class="relative rounded-3xl overflow-hidden">
-    <video
+    <Plyr
       v-if="file.mimeType.startsWith('video')"
       :src="file.webContentLink"
       :poster="file.thumbnailLink"
-      controls
       class="w-full"
-    ></video>
+      type="html"
+    />
     <img v-else :src="file.webContentLink" :alt="file.name" class="w-full" />
-    <div class="absolute bottom-0 right-0 flex left-0 p-3">
+    <div class="absolute top-0 right-0 flex left-0 p-3">
       <i class="flex-1"></i>
       <nav class="flex space-x-2 items-center">
         <AppButton icon="download" color="secondary" @click="download" />
@@ -51,12 +51,24 @@ const download = () => {
   window.open(props.file.webContentLink, "_blank");
 };
 
-const share = () => {
+const share = async () => {
+  // // CORS error
+  // const blob = await (await fetch(props.file.webContentLink)).blob();
+  // const filesArray = [
+  //   new File([blob], props.file.name, {
+  //     type: blob.type,
+  //     lastModified: new Date().getTime(),
+  //   }),
+  // ];
+  // console.log({ filesArray });
+
   const shareData = {
-    title: "SWORDS OF IRON",
+    title: props.file.name,
     text: props.file.name,
     url: props.file.webContentLink,
+    // files: filesArray,
   };
+
   if (navigator.canShare(shareData)) {
     navigator.share(shareData);
   } else {

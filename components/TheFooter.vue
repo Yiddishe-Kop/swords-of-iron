@@ -1,13 +1,19 @@
 <template>
-  <!-- <AboutSection /> -->
-  <footer>
-    <Container middle-grid class="py-6 bg-white">
-      <div class="relative grid gap-y-14 md:grid-cols-3 md:gap-x-0 -mx-2">
+  <footer class="bg-white">
+    <Container middle-grid class="py-6">
+      <div class="relative -mx-2">
         <div class="px-2 items-center flex">
           <nuxt-link to="/">
-            <Logo class="h-12" theme="dark" full />
+            <Logo class="h-28" theme="dark" full />
           </nuxt-link>
-          <p class="ms-4">Take part in the <strong>war of awareness</strong></p>
+          <div class="ms-8">
+            <p class="">Take part in the <strong>war of awareness</strong></p>
+            <p class="mt-2 text-sm text-brand max-w-sm mx-auto">
+              Join the fight against Hamas's lies! Share the truth about
+              terrorism on social media and show the world what Hamas is really
+              all about. #SUPPORTISRAEL
+            </p>
+          </div>
         </div>
       </div>
     </Container>
