@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxtjs/tailwindcss",
+    "@pinia/nuxt",
     [
       "unplugin-icons/nuxt",
       {
@@ -24,5 +25,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiKey: "", // can be overridden by NUXT_API_KEY environment variable
     mainFolderId: "", // can be overridden by NUXT_MAIN_FOLDER_ID environment variable
+  },
+
+  pinia: {
+    autoImports: ["defineStore", "acceptHMRUpdate", "storeToRefs"],
   },
 });

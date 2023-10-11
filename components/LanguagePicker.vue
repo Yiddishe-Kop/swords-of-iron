@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-center py-1 overflow-auto space-x-3">
+  <nav class="flex py-1 overflow-auto space-x-3">
     <nuxt-link
       v-for="language in languages"
       :key="language"
@@ -16,22 +16,10 @@
 </template>
 
 <script setup lang="ts">
+import { useLanguages } from "~/stores/langs";
+
 const lang = useRoute().params.lang || "english";
 
-const languages: Record<string, string> = {
-  english: "english",
-  hebrew: "hebrew",
-  swedish: "swedish",
-  russian: "russian",
-  french: "french",
-  arabic: "arabic",
-  spanish: "spanish",
-  chinese: "chinese",
-  japanese: "japanese",
-  greek: "greek",
-  turkish: "turkish",
-  dutch: "dutch",
-  german: "german",
-  portuguese: "portuguese",
-};
+const langs = useLanguages();
+const { languages } = storeToRefs(langs);
 </script>
