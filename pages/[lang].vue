@@ -6,5 +6,3 @@
   <Hero />
   <Timeline />
 </template>
-
-<script setup></script>
