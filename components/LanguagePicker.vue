@@ -1,6 +1,6 @@
 <template>
   <section class="pt-4 bg-white">
-    <p class="text-slate-800 uppercase text-sm max-w-sm mx-auto">
+    <p class="text-slate-800 text-center uppercase text-sm max-w-sm mx-auto">
       Choose a language to show content:
     </p>
     <nav class="flex p-3 overflow-auto space-x-0.5">

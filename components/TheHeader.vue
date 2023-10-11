@@ -1,16 +1,19 @@
 <template>
   <header
     id="top"
-    class="sticky border-b border-white/20 top-0 bg-white/20 backdrop-blur-xl z-40"
+    class="sticky border-b border-white/20 top-0 bg-white/50 backdrop-blur-xl z-40"
   >
     <Container max-width="max-w-screen-2xl" padding="py-1">
       <div class="flex items-center">
         <nuxt-link to="/">
           <Logo class="h-12 md:h-16" theme="dark" full />
         </nuxt-link>
-        <div class="flex-1 text-brand-900 font-black mx-4 text-xl md:text-2xl">
+        <div
+          class="hidden md:block text-brand-900 font-black mx-4 whitespace-nowrap text-2xl"
+        >
           Swords Of Iron
         </div>
+        <i class="flex-1" />
         <AppButton icon="share" @click="share">Share</AppButton>
         <!-- <div class="flex-1 text-brand">ISRAEL EXPLAINS SWORDS OF IRON</div> -->
       </div>
