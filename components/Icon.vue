@@ -4,7 +4,8 @@
 
 <script setup>
 import TablerMenu from "~icons/tabler/menu";
-import TablerHome from "~icons/tabler/smart-home";
+import TablerDownload from "~icons/tabler/download";
+import TablerShare from "~icons/tabler/share";
 import TablerShield from "~icons/tabler/shield-chevron";
 import TablerVolume from "~icons/tabler/volume";
 import TablerWorld from "~icons/tabler/world";
@@ -31,6 +32,8 @@ const props = defineProps({
 });
 
 const icons = {
+  "tabler-download": TablerDownload,
+  "tabler-share": TablerShare,
   "tabler-menu": TablerMenu,
   "tabler-volume": TablerVolume,
   "tabler-shield": TablerShield,

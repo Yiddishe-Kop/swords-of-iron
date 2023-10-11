@@ -8,7 +8,7 @@
         'grayscale hover:grayscale-0': lang !== language,
         'ring-4': lang === language,
       }"
-      class="text-slate-400 shrink-0 rounded-full transition-all block w-10 h-10 hover:text-slate-200 text-sm transition-colors"
+      class="text-slate-400 shrink-0 rounded-full transition-all block w-10 h-10 hover:text-slate-200 text-sm"
     >
       <img :src="`img/lang/${language}.svg`" :alt="language" />
     </nuxt-link>

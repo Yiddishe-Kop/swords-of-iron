@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-brand-50">
+  <section class="bg-brand-100">
     <Container class="text-center">
       <h2 class="text-brand text-xl">Israel Explains</h2>
       <h1 class="font-black text-brand-950 text-3xl">SWORDS OF IRON</h1>

@@ -51,7 +51,11 @@ async function listFilesInFolder(
       fields:
         "nextPageToken, files(id, name, webContentLink, webViewLink, size, createdTime, mimeType, thumbnailLink, hasThumbnail)",
     });
-    result.push(...response.data.files!);
+    result.push(
+      ...response.data.files!.filter(
+        (file) => file.mimeType?.match(/^(image|video)/) // only images and videos
+      )
+    );
     pageToken = response.data.nextPageToken || "";
   } while (pageToken !== "");
 
