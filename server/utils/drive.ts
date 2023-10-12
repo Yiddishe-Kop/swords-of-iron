@@ -30,10 +30,20 @@ export async function listLanguages(): Promise<Language[]> {
     const languageNameRegex = /[A-Za-z]+/;
     languages = data
       .files!.filter((language) => !language.name?.startsWith("*"))
-      .sort((a, b) => a.name!.localeCompare(b.name!))
       .map((file) => {
         const match = file.name!.match(languageNameRegex);
         return new Language(match![0].toLowerCase(), file.id!);
+      })
+      .sort((a, b) => a.name!.localeCompare(b.name!))
+      .sort((a, b) => {
+        // 'english' should be the first language
+        if (a.name === "english") {
+          return -1;
+        }
+        if (b.name === "english") {
+          return 1;
+        }
+        return 0;
       });
   } catch (e) {
     console.log(e);
