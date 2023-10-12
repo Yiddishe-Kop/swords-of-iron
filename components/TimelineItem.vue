@@ -51,7 +51,11 @@ const share = async () => {
 
   const shareData = {
     title: props.file.name,
-    text: props.file.name,
+    text: `#standwithisrael
+#israel
+#HamasisISIS
+#swordsofiron
+#israelexplains`,
     url: props.file.webContentLink,
     files: filesArray,
   };
