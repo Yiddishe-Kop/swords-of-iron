@@ -28,20 +28,19 @@
 
 <script setup>
 const share = async () => {
-  // // CORS error
-  // const blob = await (await fetch(props.file.webContentLink)).blob();
-  // const filesArray = [
-  //   new File([blob], props.file.name, {
-  //     type: blob.type,
-  //     lastModified: new Date().getTime(),
-  //   }),
-  // ];
-  // console.log({ filesArray });
+  const blob = await (await fetch("/img/social.png")).blob();
+  const filesArray = [
+    new File([blob], "Swords Of Iron", {
+      type: blob.type,
+      lastModified: new Date().getTime(),
+    }),
+  ];
 
   const shareData = {
     title: "Israel Explains Swords Of Iron",
     text: "Share the truth & show the world!",
     url: window.location.href,
+    files: filesArray,
   };
 
   if (navigator.canShare?.(shareData)) {

@@ -40,21 +40,20 @@ const download = () => {
 };
 
 const share = async () => {
-  // // CORS error
-  // const blob = await (await fetch(props.file.webContentLink)).blob();
-  // const filesArray = [
-  //   new File([blob], props.file.name, {
-  //     type: blob.type,
-  //     lastModified: new Date().getTime(),
-  //   }),
-  // ];
-  // console.log({ filesArray });
+  const blob = await (await fetch("/img/social.png")).blob();
+  const filesArray = [
+    new File([blob], "Swords Of Iron", {
+      type: blob.type,
+      lastModified: new Date().getTime(),
+    }),
+  ];
+  console.log({ filesArray });
 
   const shareData = {
     title: props.file.name,
     text: props.file.name,
     url: props.file.webContentLink,
-    // files: filesArray,
+    files: filesArray,
   };
 
   if (navigator.canShare?.(shareData)) {
