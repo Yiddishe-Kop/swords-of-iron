@@ -47,7 +47,6 @@ const share = async () => {
       lastModified: new Date().getTime(),
     }),
   ];
-  console.log({ filesArray });
 
   const shareData = {
     title: props.file.name,

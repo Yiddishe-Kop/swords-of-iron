@@ -7,3 +7,23 @@
     <!-- <TheFooter /> -->
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: "Swords Of Iron",
+  meta: [
+    {
+      name: "theme-color",
+      content: "#0052B4",
+    },
+    {
+      property: "og:image",
+      content: "/img/social.png",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+  ],
+});
+</script>
