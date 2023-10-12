@@ -1,5 +1,6 @@
 export const useLanguages = defineStore("langs", () => {
   const languages = ref([]);
+  const currentLanguage = ref(useRoute().params.lang);
 
   const fetchLanguages = async () => {
     const { data } = await useFetch("/api/languages");
@@ -13,5 +14,6 @@ export const useLanguages = defineStore("langs", () => {
 
   return {
     languages,
+    currentLanguage,
   };
 });

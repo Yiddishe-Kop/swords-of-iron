@@ -1,23 +1,28 @@
 <template>
   <header
     id="top"
-    class="sticky border-b border-white/20 top-0 bg-white/50 backdrop-blur-xl z-40"
+    class="sticky flex md:flex-row flex-col items-start md:items-center border-b border-white/20 top-0 bg-white/50 backdrop-blur-xl z-40"
   >
-    <Container max-width="max-w-screen-2xl" padding="py-1">
-      <div class="flex items-center">
-        <nuxt-link to="/">
-          <Logo class="h-12 md:h-16" theme="dark" full />
-        </nuxt-link>
-        <div
-          class="hidden md:block text-brand-900 font-black mx-4 whitespace-nowrap text-2xl"
+    <div class="ps-2 md:ps-6 flex shrink-0 items-center">
+      <nuxt-link to="/" class="shrink-0">
+        <Logo class="w-14 sm:w-16" theme="dark" full />
+      </nuxt-link>
+      <div class="mx-4">
+        <h2 class="text-brand text-sm/none font-bold uppercase">
+          Israel Explains
+        </h2>
+        <h1
+          class="text-brand-900 uppercase font-black whitespace-nowrap text-2xl/none"
         >
           Swords Of Iron
-        </div>
-        <i class="flex-1" />
-        <AppButton icon="share" @click="share">Share</AppButton>
-        <!-- <div class="flex-1 text-brand">ISRAEL EXPLAINS SWORDS OF IRON</div> -->
+        </h1>
+        <p class="font-bold uppercase text-brand text-[0.67rem]/none">
+          Share the truth <span class="font-thin">&</span> show the world!
+        </p>
       </div>
-    </Container>
+    </div>
+    <LanguagePicker />
+    <!-- <AppButton icon="share" @click="share">Share</AppButton> -->
   </header>
 </template>
 

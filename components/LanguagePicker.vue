@@ -1,28 +1,25 @@
 <template>
-  <section class="pt-4 bg-white">
-    <p class="text-slate-800 text-center uppercase text-sm max-w-sm mx-auto">
-      Choose a language to show content:
-    </p>
+  <section>
     <nav class="flex p-3 overflow-auto space-x-0.5">
       <nuxt-link
         v-for="language in languages"
+        v-tippy="language"
         :key="language"
         :to="`/${language}`"
         :class="{
-          'hover:bg-brand-50': lang !== language,
-          'bg-brand-100': lang === language,
+          'hover:bg-brand-50': langs.currentLanguage !== language,
+          'bg-brand-100': langs.currentLanguage === language,
         }"
-        class="flex flex-col items-center rounded-xl pt-3 p-2 shrink-0 transition-all text-sm"
+        class="rounded-xl p-1 shrink-0 transition-all"
       >
         <img
           :src="`img/lang/${language}.svg`"
           :alt="language"
           :class="{
-            'ring-4': lang === language,
+            'ring-4': langs.currentLanguage === language,
           }"
-          class="w-10 ring-brand-300 transition-all ring-offset-2 ring-offset-brand rounded-full h-10"
+          class="w-8 ring-brand-300 transition-all ring-offset-2 ring-offset-brand rounded-full h-8"
         />
-        <span class="mt-2 uppercase text-xs">{{ language }}</span>
       </nuxt-link>
     </nav>
   </section>
@@ -30,8 +27,6 @@
 
 <script setup lang="ts">
 import { useLanguages } from "~/stores/langs";
-
-const lang = useRoute().params.lang || "english";
 
 const langs = useLanguages();
 const { languages } = storeToRefs(langs);

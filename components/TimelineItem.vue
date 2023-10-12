@@ -19,18 +19,6 @@
 </template>
 
 <script setup lang="ts">
-// {
-//     "mimeType": "image/jpeg",
-//     "thumbnailLink": "https://lh3.googleusercontent.com/drive-storage/AKHj6E6Ii-ZoYVAgoRs1I85VOgxr_XXNmRCW4A8wJAuS4tugJ9b6SOFVjgn8TM1cQzvzFKcBU1ESBNDGRyvqLYSWvzBJX2w6jf-w=s220",
-//     "webViewLink": "https://drive.google.com/file/d/1vMDaepVBWtkWNyIEfhrB9I6355pGKOZ1/view?usp=drivesdk",
-//     "webContentLink": "https://drive.google.com/uc?id=1vMDaepVBWtkWNyIEfhrB9I6355pGKOZ1&export=download",
-//     "size": "861101",
-//     "hasThumbnail": true,
-//     "id": "1vMDaepVBWtkWNyIEfhrB9I6355pGKOZ1",
-//     "name": "רוסית Russain.jpg",
-//     "createdTime": "2023-10-10T16:11:38.635Z"
-// }
-
 type DriveFile = {
   id: string;
   name: string;
